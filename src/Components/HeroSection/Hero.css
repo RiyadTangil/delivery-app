@@ -1,0 +1,43 @@
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    border-color: #FFB03B !important;
+  }
+  .hero-container {
+    background-size: cover!important;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+    background: linear-gradient(
+        0deg, rgba(33, 33, 33, 0.3), rgba(33, 33, 33, 0.4)), url(https://iinfluxx.com/Foodbox1234/uploads/system/Vdw27JKmMPDlBQLYCUH5.jpg) no-repeat;
+  }
+  .hero-container h1{
+      font-size:70px;
+      font-weight:350;
+      padding: 20px 0;
+  }
+  .hero-container h5{
+    font-size:25px; 
+    font-weight:300;
+  }
+  .hero-container .search-container{
+      width: 100%;
+  }
+  @media (max-width: 575px){
+
+    .hero-container .search-container{
+        width: 100%;
+        padding: 0px 4px;
+    }
+    .hero-container h1{
+        font-size:40px;
+   
+  
+    }
+    .hero-container h5{
+        font-size:15px; 
+ 
+      }
+      
+  }

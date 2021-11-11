@@ -1,0 +1,15 @@
+
+  .Owner-section h1{
+   font-size: 50px;
+   font-weight:350;
+   text-align: center;
+  }
+ 
+  
+  @media  (width <= 576px) { 
+    .Owner-section h1{
+      font-size: 30px;
+    }
+   }
+    
+  
