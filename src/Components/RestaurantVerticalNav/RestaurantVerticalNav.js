@@ -1,29 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import FoodCard from '../FoodCard/FoodCard';
 import './VerticalNav.css'
-
+import Scrollspy from 'react-scrollspy'
 const RestaurantVerticalNav = () => {
+    const [restaurant, setRestaurant] = useState([])
+    // const dispatch = useDispatch();
+    // useEffect(() => {
+    //     dispatch(getRestaurantList());
+    // }, [dispatch]);
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response => response.json())
+            .then(data => setRestaurant(data))
+    }, [])
     return (
         <div className='row'>
             <div className='d-flex justify-content-between'>
-                <div className="col-md-3">
-                    <div id="list-example" class="list-group">
-                        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-                        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-                    </div>
+                <div className="col-md-3 d-none d-md-block border-end">
+                    <Scrollspy
+                        className="scrollspy sticky-custom list-unstyled" items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6', 'section-7', 'section-8', 'section-9' , 'section-10']}
+                        currentClassName="isCurrent">
+                        {[1, 2, 3, 4, 5, 6, 7, 8,9,10].map(navLink => {
+                            return (<li ><a href={`#section-${navLink}`}><h5 >Most loved Combos</h5></a></li>)
+                        })}
+
+                        {/* <li ><a href="#section-1"><h5 >Best In Biryani</h5></a></li>
+                            <li ><a href="#section-2"><h5 >Recommended</h5></a></li>
+                            <li ><a href="#section-3"><h5 >Most loved Combos</h5></a></li>
+                            <li ><a href="#section-4"><h5 >Combos</h5></a></li>
+                            <li ><a href="#section-5"><h5 >Meals</h5></a></li>
+                            <li ><a href="#section-6"><h5 >Starts</h5></a></li>
+                            <li ><a href="#section-7"><h5 >Main Course</h5></a></li>
+                            <li ><a href="#section-8"><h5 >Rice</h5></a></li>
+                            <li ><a href="#section-9"><h5 >Drink</h5></a></li> */}
+
+
+                    </Scrollspy>
                 </div>
 
-                <div className="col-md-9">
-                    <div style={{ overflowY: 'auto', }} data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                        <h4 id="list-item-1">Item 1</h4>
-                        <p>... Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nihil ipsam reprehenderit quo iure explicabo. Soluta, quod earum delectus quisquam, voluptatibus doloremque sit dolore expedita sapiente unde voluptates praesentium! Facere, iure! Blanditiis facere corporis ut amet veniam? Quam repellat aperiam, sint omnis amet quia cupiditate minus eligendi repellendus vitae quasi facilis dignissimos in dolorem qui debitis ut eos laborum explicabo veniam cumque delectus natus, nulla maxime. Illo tenetur ab totam maxime dolor vitae earum mollitia rerum incidunt a architecto eaque nisi debitis temporibus, pariatur ea iusto. Corporis, minus voluptas molestiae hic quod porro quae voluptate vitae ipsa eveniet commodi delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, vero.</p>
-                        <h4 id="list-item-2">Item 2</h4>
-                        <p>... Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nihil ipsam reprehenderit quo iure explicabo. Soluta, quod earum delectus quisquam, voluptatibus doloremque sit dolore expedita sapiente unde voluptates praesentium! Facere, iure! Blanditiis facere corporis ut amet veniam? Quam repellat aperiam, sint omnis amet quia cupiditate minus eligendi repellendus vitae quasi facilis dignissimos in dolorem qui debitis ut eos laborum explicabo veniam cumque delectus natus, nulla maxime. Illo tenetur ab totam maxime dolor vitae earum mollitia rerum incidunt a architecto eaque nisi debitis temporibus, pariatur ea iusto. Corporis, minus voluptas molestiae hic quod porro quae voluptate vitae ipsa eveniet commodi delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, vero.</p>
-                        <h4 id="list-item-3">Item 3</h4>
-                        <p>... Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nihil ipsam reprehenderit quo iure explicabo. Soluta, quod earum delectus quisquam, voluptatibus doloremque sit dolore expedita sapiente unde voluptates praesentium! Facere, iure! Blanditiis facere corporis ut amet veniam? Quam repellat aperiam, sint omnis amet quia cupiditate minus eligendi repellendus vitae quasi facilis dignissimos in dolorem qui debitis ut eos laborum explicabo veniam cumque delectus natus, nulla maxime. Illo tenetur ab totam maxime dolor vitae earum mollitia rerum incidunt a architecto eaque nisi debitis temporibus, pariatur ea iusto. Corporis, minus voluptas molestiae hic quod porro quae voluptate vitae ipsa eveniet commodi delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, vero.</p>
-                        <h4 id="list-item-4">Item 4</h4>
-                    </div>
+                <div className="col-md-9 col-sm-12 ps-3">
+                {[1, 2, 3, 4, 5, 6, 7, 8,9,10].map(navLink => {
+                        return (
+                            <div id={`section-${navLink}`}>
+                                <h3 className="sticky-custom  text-muted bg-white">Best Loved Combo {navLink}</h3>
+                                {[1, 2, 3, 4, 5, 6, 7,].map(foodCard => <FoodCard></FoodCard>)}
+                            </div>
+                        )
+                    })
+                    }
                 </div>
 
             </div>

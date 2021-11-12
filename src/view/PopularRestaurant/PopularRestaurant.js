@@ -8,7 +8,6 @@ const PopularRestaurant = () => {
         <>
             <Navbar></Navbar>
             <SearchFilter title="Popular restaurants"></SearchFilter>
-            {/* <SearchFilter title="Recently added restaurants"></SearchFilter> */}
             <div className="px-3 pb-4">
                 <Restaurants ></Restaurants>
             </div>

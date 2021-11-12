@@ -1,8 +1,15 @@
 import React,{useEffect,useState} from 'react';
 import RestaurantCard from '../RestaurantCard/RestaurantCard';
-
-const Restaurants = ({}) => {
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { getRestaurantList } from '../../redux/actions/EcommerceActions';
+;
+const Restaurants = () => {
     const [restaurant, setRestaurant] = useState([])
+    // const dispatch = useDispatch();
+    // useEffect(() => {
+    //     dispatch(getRestaurantList());
+    // }, [dispatch]);
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")
             .then(response => response.json())
@@ -14,8 +21,6 @@ const Restaurants = ({}) => {
             restaurant.map(restaurant =>
                 <RestaurantCard restaurant={restaurant}> </RestaurantCard>)
         }
-
-      
     </div>
     );
 };

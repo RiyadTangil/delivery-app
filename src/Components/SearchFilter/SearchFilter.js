@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchFilter = ({title}) => {
+const SearchFilter = ({ title }) => {
     return (
         <div className="pt-5 mt-5 px-3">
             <div className="row">
@@ -14,10 +14,10 @@ const SearchFilter = ({title}) => {
                     </div>
                 </div>
                 <div className="col-md-8">
-                   
+
                     <div className=" d-flex align-items-center justify-content-end">
                         <small>filter by</small>
-                
+
                         <div className="mx-2">
                             <select className="form-select " id="floatingSelectGrid" aria-label="Floating label select example">
                                 <option selected> Japanese </option>
@@ -26,7 +26,7 @@ const SearchFilter = ({title}) => {
                                 <option value="3">American</option>
                                 <option value="4">Thai</option>
                                 <option value="5">North Indian</option>
-                         
+
                             </select>
                         </div>
 
@@ -45,7 +45,11 @@ const SearchFilter = ({title}) => {
                             <button className="btn btn-secondary">Filter</button>
 
                         </div>
+
                     </div>
+             
+             
+             
                 </div>
 
 

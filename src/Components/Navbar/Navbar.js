@@ -3,7 +3,7 @@ import "./Navbar.css"
 const Navbar = () => {
     return (
     
-  <header id="header" className="fixed-top  bg-secondary">
+  <header id="header" className="bg-secondary">
     <div className="container d-flex align-items-center ">
 
       <a href="index.html" className="logo me-auto"><img src="https://img.freepik.com/free-vector/letter-s-with-spoon-fork-logo-tableware-logo-fast-food-restaurant-logo_65373-25.jpg?size=338&ext=jpg" alt="" className="img-fluid"></img></a>
@@ -18,7 +18,7 @@ const Navbar = () => {
               <li><a href="/restaurant/recent">Recently added</a></li>
             </ul>
           </li>
-          <li><a className="getstarted scrollto" href="#about">Get Started</a></li>
+          <li><a className="getstarted scrollto" href="#about">Login</a></li>
         </ul>
         <i className="bi bi-list mobile-nav-toggle"></i>
       </nav>
