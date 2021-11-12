@@ -2,26 +2,28 @@ import React from 'react';
 import './RestaurantInfo.css'
 import { faCheckSquare } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelopeOpen, faMapMarkerAlt, faMobileAlt, } from '@fortawesome/free-solid-svg-icons';
+import { } from '@fortawesome/free-solid-svg-icons';
 const RestaurantInfo = () => {
     return (
         <div >
-            <div className="restaurant-media">
-                <div className='restaurant-img'>
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" className="card-img-top px-2" alt="..."></img>
+            <div >
+                <div className='restaurant-media'>
+                    <div className="restaurant-img">
+                        <img style={{width:"100%",height:"500px",objectFit:"cover"}} src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"  alt="..."></img>
 
+                    </div>
                 </div>
                 <div style={{ transform: "translateY(-80px)" }}>
                     <div className='d-flex justify-content-center'>
-                        <div className="logo-cotainer">
-                            <img src="https://i.ytimg.com/vi/AUml2IgSFCQ/maxresdefault.jpg" className="img-fluid" alt="..."></img>
+                        <div className="logo-img">
+                            <img src="https://i.ytimg.com/vi/AUml2IgSFCQ/maxresdefault.jpg" className="img-fluid  shadow" alt="..."></img>
                         </div>
 
                     </div>
                 </div>
             </div>
 
-            <div style={{ transform: "translateY(-80px)" }} className="bg-white">
+            <div style={{ transform: "translateY(-70px)" }} className="bg-white">
                 <div>
                     <div className="container shadow  p-4">
                         <div className="row ">

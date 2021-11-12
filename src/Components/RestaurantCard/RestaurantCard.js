@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const RestaurantCard = ({ restaurant }) => {
     // onClick={()=>!showCheckBox?history.push(`/restaurantInfo/${restaurant.id}`):{}}
     return (
-        <div className="col-md-4 my-2">
+        <div className="col-md-4 my-2 ">
             <Link className="text-decoration-none" to={'/restaurants/' + restaurant.id}>
 
-                <div className="card " >
+                <div  className="card  shadow" >
                     <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" className="card-img-top" alt="..."></img>
                     <div className="card-body">
                         <h5 className="card-title">{restaurant.name}</h5>

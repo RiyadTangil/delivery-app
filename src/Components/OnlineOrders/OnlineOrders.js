@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FoodCard from '../FoodCard/FoodCard';
-import './VerticalNav.css'
+import './OnlineOrders.css'
 import Scrollspy from 'react-scrollspy'
 const RestaurantVerticalNav = () => {
     const [restaurant, setRestaurant] = useState([])
@@ -23,17 +23,6 @@ const RestaurantVerticalNav = () => {
                         {[1, 2, 3, 4, 5, 6, 7, 8,9,10].map(navLink => {
                             return (<li ><a href={`#section-${navLink}`}><h5 >Most loved Combos</h5></a></li>)
                         })}
-
-                        {/* <li ><a href="#section-1"><h5 >Best In Biryani</h5></a></li>
-                            <li ><a href="#section-2"><h5 >Recommended</h5></a></li>
-                            <li ><a href="#section-3"><h5 >Most loved Combos</h5></a></li>
-                            <li ><a href="#section-4"><h5 >Combos</h5></a></li>
-                            <li ><a href="#section-5"><h5 >Meals</h5></a></li>
-                            <li ><a href="#section-6"><h5 >Starts</h5></a></li>
-                            <li ><a href="#section-7"><h5 >Main Course</h5></a></li>
-                            <li ><a href="#section-8"><h5 >Rice</h5></a></li>
-                            <li ><a href="#section-9"><h5 >Drink</h5></a></li> */}
-
 
                     </Scrollspy>
                 </div>

@@ -1,24 +1,14 @@
-.restaurant-img {
-    width: 100% !important;
-    overflow: hidden !important;
-    height:100vh;
-  };
-  .restaurant-img img{
-    height: 500px !important;
-    width: 50px !important;   
-  }
 
-  .logo-cotainer{
+  .logo-img{
     height: 180px;
     width: 180px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
-   
+    outline: 5px solid #FFB03B;
   
   };
-
- 
+  
 .info {
     padding: 30px;
     background: #fff !;
