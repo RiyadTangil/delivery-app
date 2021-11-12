@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink, faMapMarkerAlt, faMobileAlt, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 const RestaurantCard = ({ restaurant }) => {
-    // onClick={()=>!showCheckBox?history.push(`/restaurantInfo/${restaurant.id}`):{}}
+    
     return (
         <div className="col-md-4 my-2 ">
+            {/* // onClick={()=>history.push(`/restaurantInfo/${restaurant.id}`)} */}
             <Link className="text-decoration-none" to={'/restaurants/' + restaurant.id}>
 
                 <div  className="card  shadow pb-3" >
