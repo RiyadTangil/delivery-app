@@ -1,6 +1,7 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "./Navbar.css"
 const Navbar = () => {
+  const [showToggle,setShowToggle]=useState(true)
     return (
     
   <header id="header" className="bg-secondary">
@@ -8,9 +9,9 @@ const Navbar = () => {
 
       <a href="index.html" className="logo me-auto"><img src="https://img.freepik.com/free-vector/letter-s-with-spoon-fork-logo-tableware-logo-fast-food-restaurant-logo_65373-25.jpg?size=338&ext=jpg" alt="" className="img-fluid"></img></a>
 
-      <nav id="navbar" className="navbar">
+      <nav id="navbar" className={`${showToggle? "navbar-mobile" : "navbar"}`}>
         <ul>
-          <li><a className="nav-link scrollto active" href="/">Home</a></li>
+          <li><a className="nav-link  active" href="/">Home</a></li>
            <li className="dropdown nav-link"><a href="#"><span>Restaurant</span> <i className="bi bi-chevron-down"></i></a>
             <ul>
         
@@ -18,9 +19,14 @@ const Navbar = () => {
               <li><a href="/restaurant/recent">Recently added</a></li>
             </ul>
           </li>
-          <li><a className="getstarted scrollto" href="#about">Login</a></li>
+          <li><a className="getstarted " href="#about">Login</a></li>
         </ul>
-        <i className="bi bi-list mobile-nav-toggle"></i>
+        {showToggle?  <i onClick={()=>setShowToggle(false)} className="bi bi-list  d-sm-block d-md-none  mobile-nav-toggle">show</i>
+        : 
+        <i onClick={()=>setShowToggle(true)} className="bi bi-list  mobile-nav-toggle d-sm-block d-md-none ">remove</i>
+        }
+       
+       
       </nav>
     </div>
   </header>
